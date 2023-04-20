@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjj52neyqp03g"]
+
+[ext_resource type="Script" path="res://scenes/PROVINCEGUI.gd" id="1_55cxd"]
+[ext_resource type="Texture2D" uid="uid://ck84t5jh0x01d" path="res://art/icons/wheat-icon.png" id="2_ar2cr"]
+[ext_resource type="Texture2D" uid="uid://dul4f84x3hp6j" path="res://art/icons/timber-icon.png" id="3_8ak2h"]
+
+[node name="ProvinceGui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_55cxd")
+
+[node name="TopPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 76.0
+
+[node name="SeasonLbl" type="Label" parent="TopPanel"]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 48.0
+offset_right = 1088.0
+offset_bottom = 74.0
+text = "Season"
+
+[node name="DayLbl" type="Label" parent="TopPanel"]
+layout_mode = 0
+offset_left = 960.0
+offset_right = 1040.0
+offset_bottom = 26.0
+text = "Day:"
+
+[node name="YearLbl" type="Label" parent="TopPanel"]
+layout_mode = 0
+offset_left = 1048.0
+offset_right = 1152.0
+offset_bottom = 26.0
+text = "Year:"
+
+[node name="ProvResourcesLbl" type="Label" parent="TopPanel"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 48.0
+offset_right = 322.0
+offset_bottom = 74.0
+text = "Natural resources in province:"
+
+[node name="ProvResource" type="Sprite2D" parent="TopPanel/ProvResourcesLbl"]
+position = Vector2(256, 8)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_ar2cr")
+
+[node name="ProvResource2" type="Sprite2D" parent="TopPanel/ProvResourcesLbl"]
+position = Vector2(296, 8)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_8ak2h")

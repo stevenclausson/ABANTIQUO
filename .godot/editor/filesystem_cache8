@@ -1,3 +1,14 @@
 2a60927148abd1d33b818b535e306557
-::res://::1681940185
+::res://::1682013687
 icon.svg::CompressedTexture2D::1503028379585235069::1681940178::1681940188::1::::<><>::
+README.md::TextFile::-1::1681940923::0::1::::<><>::
+::res://art/::1681942732
+::res://art/ground/::1681942732
+::res://art/icons/::1682015146
+timber-icon.png::CompressedTexture2D::8587518580046968827::1682015146::1682015146::1::::<><>::
+wheat-icon.png::CompressedTexture2D::5544650582481053251::1682015011::1682015011::1::::<><>::
+::res://scenes/::1682014403
+PROVINCEGUI.gd::GDScript::-1::1682014398::0::1::::<>Control<>::
+PROVINCEGUI.tscn::PackedScene::5424990776228678170::1682014403::0::1::::<><>::res://scenes/PROVINCEGUI.gd
+::res://scripts/::1682013773
+Global.gd::GDScript::-1::1682013773::0::1::::<>Node<>::
