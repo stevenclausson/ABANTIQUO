@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjj52neyqp03g"]
+[gd_scene load_steps=2 format=3 uid="uid://cx7ypwxw8h03w"]
 
-[ext_resource type="Script" path="res://scenes/PROVINCEGUI.gd" id="1_55cxd"]
-[ext_resource type="Texture2D" uid="uid://ck84t5jh0x01d" path="res://art/icons/wheat-icon.png" id="2_ar2cr"]
-[ext_resource type="Texture2D" uid="uid://dul4f84x3hp6j" path="res://art/icons/timber-icon.png" id="3_8ak2h"]
+[ext_resource type="Script" path="res://scripts/PROVINCEGUI.gd" id="1_g67a7"]
 
 [node name="ProvinceGui" type="Control"]
 layout_mode = 3
@@ -11,7 +9,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_55cxd")
+script = ExtResource("1_g67a7")
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+title = "WAIT!"
+position = Vector2i(200, 250)
+size = Vector2i(565, 250)
+ok_button_text = "Great..."
+dialog_text = "This game is in Alpha stage! Please remember when you are playing ,
+that some things do not work! It's OK. Everything will be OK.
+
+Please. It's OK."
 
 [node name="TopPanel" type="Panel" parent="."]
 layout_mode = 0
@@ -40,20 +48,126 @@ offset_right = 1152.0
 offset_bottom = 26.0
 text = "Year:"
 
-[node name="ProvResourcesLbl" type="Label" parent="TopPanel"]
+[node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 48.0
-offset_right = 322.0
-offset_bottom = 74.0
-text = "Natural resources in province:"
+offset_left = 704.0
+offset_top = 80.0
+offset_right = 1144.0
+offset_bottom = 632.0
+clip_tabs = false
 
-[node name="ProvResource" type="Sprite2D" parent="TopPanel/ProvResourcesLbl"]
-position = Vector2(256, 8)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_ar2cr")
+[node name="Resources" type="ScrollContainer" parent="TabContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
 
-[node name="ProvResource2" type="Sprite2D" parent="TopPanel/ProvResourcesLbl"]
-position = Vector2(296, 8)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_8ak2h")
+[node name="HSplitContainer" type="HSplitContainer" parent="TabContainer/Resources"]
+layout_mode = 2
+split_offset = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Resources/HSplitContainer"]
+layout_mode = 2
+
+[node name="TimberLbl" type="Label" parent="TabContainer/Resources/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+text = "Timber:"
+
+[node name="FlintLbl" type="Label" parent="TabContainer/Resources/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+text = "Flint:"
+
+[node name="StoneLbl" type="Label" parent="TabContainer/Resources/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+text = "Stone:"
+
+[node name="ThatchLbl" type="Label" parent="TabContainer/Resources/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+text = "Thatch:"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TabContainer/Resources/HSplitContainer"]
+layout_mode = 2
+
+[node name="WildBerriesLbl" type="Label" parent="TabContainer/Resources/HSplitContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Wild Berries:"
+
+[node name="WildMeatLbl" type="Label" parent="TabContainer/Resources/HSplitContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Wild Meat:"
+
+[node name="WaterLbl" type="Label" parent="TabContainer/Resources/HSplitContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Water:"
+
+[node name="Population" type="ScrollContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Population"]
+layout_mode = 2
+
+[node name="Buildings" type="ScrollContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Buildings"]
+layout_mode = 2
+
+[node name="TimberCampBtn" type="Button" parent="TabContainer/Buildings/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Builds Timber Camp"
+text = "Timber Camp"
+
+[node name="TimberCampLbl" type="Label" parent="TabContainer/Buildings/VBoxContainer/TimberCampBtn"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 1.0
+offset_right = 168.0
+offset_bottom = 27.0
+text = ":0"
+
+[node name="FlintCampBtn" type="Button" parent="TabContainer/Buildings/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Builds Timber Camp"
+text = "Flint Camp"
+
+[node name="FlintCampLbl" type="Label" parent="TabContainer/Buildings/VBoxContainer/FlintCampBtn"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 1.0
+offset_right = 168.0
+offset_bottom = 27.0
+text = ":0"
+
+[node name="InfoPanel" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 80.0
+offset_right = 576.0
+offset_bottom = 384.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InfoPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="InfoPanel/VBoxContainer"]
+layout_mode = 2
+autowrap_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 94.0
+offset_bottom = 31.0
+text = "Save Game"
+
+[node name="LoadGameBtn" type="Button" parent="."]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 96.0
+offset_bottom = 71.0
+text = "Load Game"
+
+[connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/TimberCampBtn" to="." method="_on_timber_camp_btn_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="LoadGameBtn" to="." method="_on_load_game_btn_pressed"]

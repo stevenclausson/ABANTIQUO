@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://8b3khatbicqj"]
+
+[ext_resource type="Texture2D" uid="uid://vocwmo2777a4" path="res://icon.svg" id="1_yl4ka"]
+
+[node name="RulerScene" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 960.0
+offset_bottom = 616.0
+
+[node name="RulerImg" type="Sprite2D" parent="Panel"]
+position = Vector2(64, 64)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("1_yl4ka")
+
+[node name="NameLbl" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 8.0
+offset_right = 232.0
+offset_bottom = 31.0
+text = "Name: Steven Clausson"
+
+[node name="TitleLbl" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 40.0
+offset_right = 373.0
+offset_bottom = 66.0
+text = "Title: Chieftan
+"
