@@ -21,8 +21,8 @@ SaveResource="*res://scripts/Resource.gd"
 
 [display]
 
-window/size/window_width_override=800
-window/size/window_height_override=600
+window/size/window_width_override=1200
+window/size/window_height_override=800
 
 [dotnet]
 

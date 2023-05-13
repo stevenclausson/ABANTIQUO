@@ -48,6 +48,86 @@ offset_right = 1152.0
 offset_bottom = 26.0
 text = "Year:"
 
+[node name="Button" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_right = 94.0
+offset_bottom = 31.0
+text = "Save Game"
+
+[node name="LoadGameBtn" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 96.0
+offset_bottom = 71.0
+text = "Load Game"
+
+[node name="LeaderBtn" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 128.0
+offset_right = 190.0
+offset_bottom = 31.0
+disabled = true
+text = "Leader"
+
+[node name="GovernmentBtn" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 256.0
+offset_right = 318.0
+offset_bottom = 31.0
+disabled = true
+text = "Government"
+
+[node name="ResearchBtn" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 40.0
+offset_right = 190.0
+offset_bottom = 71.0
+disabled = true
+text = "Research"
+
+[node name="DiplomacyBTn" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 40.0
+offset_right = 335.0
+offset_bottom = 71.0
+disabled = true
+text = "Diplomacy"
+
+[node name="VersionBtn" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 8.0
+offset_right = 750.0
+offset_bottom = 39.0
+text = "version: 0.0.1"
+
+[node name="DominionBar" type="ProgressBar" parent="TopPanel"]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 48.0
+offset_right = 704.0
+offset_bottom = 75.0
+value = 1.0
+show_percentage = false
+
+[node name="CurrentDominionLbl" type="Label" parent="TopPanel/DominionBar"]
+layout_mode = 0
+offset_left = -104.0
+offset_right = -16.0
+offset_bottom = 23.0
+text = "1"
+horizontal_alignment = 2
+
+[node name="MaxDominionLbl" type="Label" parent="TopPanel/DominionBar"]
+layout_mode = 0
+offset_left = 208.0
+offset_right = 296.0
+offset_bottom = 26.0
+tooltip_text = "Area in which you can build. Research and grow to increase your domain."
+text = "100"
+
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 0
 offset_left = 704.0
@@ -106,6 +186,12 @@ layout_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Population"]
 layout_mode = 2
 
+[node name="PopOverviewLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+autowrap_mode = 2
+
 [node name="Buildings" type="ScrollContainer" parent="TabContainer"]
 visible = false
 layout_mode = 2
@@ -155,19 +241,15 @@ size_flags_vertical = 3
 layout_mode = 2
 autowrap_mode = 1
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_right = 94.0
-offset_bottom = 31.0
-text = "Save Game"
+[node name="VersionDialog" type="AcceptDialog" parent="."]
+title = "Changelog"
+position = Vector2i(200, 250)
+size = Vector2i(152, 109)
+content_scale_aspect = 4
+dialog_text = "July 1, 2023 - 0.0.1 
+- Released"
 
-[node name="LoadGameBtn" type="Button" parent="."]
-layout_mode = 0
-offset_top = 40.0
-offset_right = 96.0
-offset_bottom = 71.0
-text = "Load Game"
-
+[connection signal="pressed" from="TopPanel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TopPanel/LoadGameBtn" to="." method="_on_load_game_btn_pressed"]
+[connection signal="pressed" from="TopPanel/VersionBtn" to="." method="_on_version_btn_pressed"]
 [connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/TimberCampBtn" to="." method="_on_timber_camp_btn_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="LoadGameBtn" to="." method="_on_load_game_btn_pressed"]

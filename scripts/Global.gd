@@ -16,7 +16,7 @@ var malePopulation = 10
 var femalePopulation = 10
 var childrenPopulation = 0
 var provincePopulation
-var populationGrowthRate = 0.008
+var populationGrowthRate = 0.006
 var culture
 var newPop = 0
 var newBaby
@@ -26,14 +26,22 @@ var foragedFood = 0
 
 #----Resources Stuff---------------------------------
 var water = 200
+
 var timber = 50
+var timberGatherRate = 0
+
 var stone = 50
 var flint = 50
 var thatch = 200
-var wildBerries = 200
-var wildMeat = 200
+var wildBerries = 100
+var wildMeat = 50
 #---Building Stuff----------------------------------
 var timberCamp = 0
+
+
+#-------Progress Level Values------------------------
+var dominionLevel = 1
+var maxDominionLevel = 10
 #----Hunger Functions-------------------------------
 func AutoForage():
 	rng.randomize()
@@ -42,7 +50,7 @@ func AutoForage():
 	flint += rng.randf_range(0,1)
 	water += rng.randf_range(5,10) + femalePopulation
 	wildBerries += rng.randf_range(10,20) + femalePopulation
-	wildMeat += rng.randf_range(5,10) + malePopulation
+	wildMeat += rng.randf_range(8,15) + malePopulation
 
 func ForagerFoodConsumption():
 	wildBerries -= provincePopulation
@@ -54,7 +62,7 @@ func ForagerFoodConsumption():
 func PopulationGrowth():
 	provincePopulation = malePopulation + femalePopulation + childrenPopulation
 	if(malePopulation >= 1) and (femalePopulation >= 1):
-		newPop += populationGrowthRate * (femalePopulation / 4)
+		newPop += (femalePopulation / 4) * populationGrowthRate
 		print("New Pops: " + str(newPop))
 		if (newPop >= 1):
 			MakeABaby()
@@ -90,12 +98,15 @@ func CheckSeason():
 		currentSeason = 1 #Winter
 		stringSeason = "Winter"
 
-
+func GatherResources():
+	timber += timberGatherRate
 #--------Building Functions----------------------------------------
 func BuildTimberCamp():
-	if (timber >= 10) and (stone >= 10):
+	if (timber >= 20) and (stone >= 20) and (flint >= 40):
 		timber -= 10
 		stone -= 10
 		timberCamp += 1
+		dominionLevel += 1
+		timberGatherRate += 1
 	else:
 		print("Not enough resources")

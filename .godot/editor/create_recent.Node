@@ -1,10 +1,11 @@
-Button
 Label
+ProgressBar
+AcceptDialog
+Button
 VBoxContainer
 HSplitContainer
 Panel
 OptionButton
-AcceptDialog
 ScrollContainer
 TabContainer
 Window

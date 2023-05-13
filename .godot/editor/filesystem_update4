@@ -1,7 +1,4 @@
-res://scenes/char_creation.tscn
-res://scenes/char_creation.gd
 res://scenes/PROVINCEGUI.tscn
+res://scenes/char_creation.tscn
 res://scripts/Global.gd
-res://scripts/Resource.gd
 res://scripts/PROVINCEGUI.gd
-res://scripts/SaveGame.gd
