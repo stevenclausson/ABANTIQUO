@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb6885k6ba3vu"]
+
+[ext_resource type="Script" path="res://scenes/mainmenu.gd" id="1_36tbh"]
+
+[node name="mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_36tbh")
+
+[node name="NewGameBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.5
+offset_top = -20.0
+offset_right = 46.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "New Game"
+
+[node name="LoadGameBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = 44.0
+offset_right = 48.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Load Game"
+
+[node name="QuitGameBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = 108.0
+offset_right = 48.0
+offset_bottom = 139.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit Game"
+
+[connection signal="pressed" from="NewGameBtn" to="." method="_on_new_game_btn_pressed"]

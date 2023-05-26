@@ -13,10 +13,10 @@ script = ExtResource("1_wsdsl")
 
 [node name="OptionButton" type="OptionButton" parent="."]
 layout_mode = 0
-offset_left = 592.0
-offset_top = 192.0
-offset_right = 720.0
-offset_bottom = 223.0
+offset_left = 832.0
+offset_top = 32.0
+offset_right = 960.0
+offset_bottom = 63.0
 item_count = 4
 popup/item_0/text = "Daxi"
 popup/item_0/id = 0
@@ -51,14 +51,32 @@ autowrap_mode = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 416.0
-offset_top = 8.0
-offset_right = 896.0
-offset_bottom = 112.0
-text = "Here is where you will create your civilization. Choose a culture and location.  When you research enough technology, you will be able to create a leader, establish a named village, and more."
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 488.0
+offset_bottom = 184.0
+text = "It is the middle Stone Age. You are leading a tribe of your culture for survival. You will start by foraging and connecting with nature. With time, you and your clan will settle down and create one of the greatest empires ever known, or fall out of memory as an unknown tribe."
 autowrap_mode = 2
 
-[node name="Button" type="Button" parent="."]
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 192.0
+offset_right = 488.0
+offset_bottom = 336.0
+text = "You must contend with hunger, loyalty, natural disasters, weather and even enemies both foreign and domestic. Your hand will guide rulers to their glory or doom, and with them will shape the people you rule."
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 384.0
+offset_right = 488.0
+offset_bottom = 424.0
+text = "Choose a culture and begin your journey..."
+autowrap_mode = 2
+
+[node name="StartGameBtn" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1040.0
 offset_top = 592.0
@@ -67,3 +85,4 @@ offset_bottom = 623.0
 text = "Start Game!"
 
 [connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="StartGameBtn" to="." method="_on_start_game_btn_pressed"]

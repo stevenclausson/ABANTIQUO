@@ -9,7 +9,7 @@ var message1 = "A Fertile Crescent culture known for it's extensive clay art, so
 	+ Administration
 	+ Water Output"
 
-var message2 = "Faiyum was a very old culture of immigrants and colonists. Choosing them will grant you:
+var message2 = "Faiyum was a very old culture of immigrants and colonists in modern day Egypt. Choosing them will grant you:
 	+ Grain Ouput
 	+ Weaving
 	+ Foraging Ouput"
@@ -37,3 +37,8 @@ func _on_option_button_item_selected(index):
 
 func _on_game_btn_pressed():
 	pass # Replace with function body.
+
+
+func _on_start_game_btn_pressed():
+	Global.CheckCulture()
+	get_tree().change_scene_to_file("res://scenes/PROVINCEGUI.tscn")

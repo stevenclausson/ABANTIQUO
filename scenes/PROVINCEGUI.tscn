@@ -109,6 +109,8 @@ offset_left = 504.0
 offset_top = 48.0
 offset_right = 704.0
 offset_bottom = 75.0
+tooltip_text = "Area in which you can build. Research and grow to increase your domain."
+mouse_filter = 1
 value = 1.0
 show_percentage = false
 
@@ -125,8 +127,15 @@ layout_mode = 0
 offset_left = 208.0
 offset_right = 296.0
 offset_bottom = 26.0
-tooltip_text = "Area in which you can build. Research and grow to increase your domain."
-text = "100"
+text = "10"
+
+[node name="Label" type="Label" parent="TopPanel/DominionBar"]
+self_modulate = Color(0.372549, 0.560784, 1, 0.321569)
+layout_mode = 0
+offset_left = 72.0
+offset_right = 112.0
+offset_bottom = 23.0
+text = "Dominion"
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 0
@@ -136,14 +145,28 @@ offset_right = 1144.0
 offset_bottom = 632.0
 clip_tabs = false
 
+[node name="Population" type="ScrollContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Population"]
+custom_minimum_size = Vector2(420, 500)
+layout_mode = 2
+
+[node name="PopOverviewLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+autowrap_mode = 2
+
 [node name="Resources" type="ScrollContainer" parent="TabContainer"]
+visible = false
 clip_contents = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
 [node name="HSplitContainer" type="HSplitContainer" parent="TabContainer/Resources"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-split_offset = 100
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Resources/HSplitContainer"]
 layout_mode = 2
@@ -179,21 +202,7 @@ text = "Wild Meat:"
 layout_mode = 2
 text = "Water:"
 
-[node name="Population" type="ScrollContainer" parent="TabContainer"]
-visible = false
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Population"]
-layout_mode = 2
-
-[node name="PopOverviewLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 3
-autowrap_mode = 2
-
 [node name="Buildings" type="ScrollContainer" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Buildings"]
@@ -214,10 +223,49 @@ text = ":0"
 
 [node name="FlintCampBtn" type="Button" parent="TabContainer/Buildings/VBoxContainer"]
 layout_mode = 2
-tooltip_text = "Builds Timber Camp"
+tooltip_text = "Builds Flint Camp"
 text = "Flint Camp"
 
 [node name="FlintCampLbl" type="Label" parent="TabContainer/Buildings/VBoxContainer/FlintCampBtn"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 1.0
+offset_right = 168.0
+offset_bottom = 27.0
+text = ":0"
+
+[node name="StoneCampBtn" type="Button" parent="TabContainer/Buildings/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Builds Stone Camp"
+text = "Stone Camp"
+
+[node name="StoneCampLbl" type="Label" parent="TabContainer/Buildings/VBoxContainer/StoneCampBtn"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 1.0
+offset_right = 168.0
+offset_bottom = 27.0
+text = ":0"
+
+[node name="PrimitiveWellBtn" type="Button" parent="TabContainer/Buildings/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Builds Primitive Well for water."
+text = "Primitive Well"
+
+[node name="PrimitiveWellLbl" type="Label" parent="TabContainer/Buildings/VBoxContainer/PrimitiveWellBtn"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 1.0
+offset_right = 168.0
+offset_bottom = 27.0
+text = ":0"
+
+[node name="HuntersCampBtn" type="Button" parent="TabContainer/Buildings/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Increases output gained from foraging/hunting"
+text = "Hunters Camp"
+
+[node name="HuntersCampLbl" type="Label" parent="TabContainer/Buildings/VBoxContainer/HuntersCampBtn"]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 1.0
@@ -249,7 +297,14 @@ content_scale_aspect = 4
 dialog_text = "July 1, 2023 - 0.0.1 
 - Released"
 
+[node name="GameDialog" type="AcceptDialog" parent="."]
+position = Vector2i(250, 200)
+
 [connection signal="pressed" from="TopPanel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TopPanel/LoadGameBtn" to="." method="_on_load_game_btn_pressed"]
 [connection signal="pressed" from="TopPanel/VersionBtn" to="." method="_on_version_btn_pressed"]
 [connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/TimberCampBtn" to="." method="_on_timber_camp_btn_pressed"]
+[connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/FlintCampBtn" to="." method="_on_flint_camp_btn_pressed"]
+[connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/StoneCampBtn" to="." method="_on_stone_camp_btn_pressed"]
+[connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/PrimitiveWellBtn" to="." method="_on_primitive_well_btn_pressed"]
+[connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/HuntersCampBtn" to="." method="_on_hunters_camp_btn_pressed"]
