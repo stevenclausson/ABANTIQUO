@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://8b3khatbicqj"]
+[gd_scene load_steps=3 format=3 uid="uid://8b3khatbicqj"]
 
+[ext_resource type="Script" path="res://scenes/RulerScript.cs" id="1_ej7v3"]
 [ext_resource type="Texture2D" uid="uid://vocwmo2777a4" path="res://icon.svg" id="1_yl4ka"]
 
 [node name="RulerScene" type="Node2D"]
+script = ExtResource("1_ej7v3")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 960.0

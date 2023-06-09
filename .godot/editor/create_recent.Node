@@ -1,11 +1,15 @@
-Label
-AcceptDialog
 Button
-ProgressBar
 VBoxContainer
-HSplitContainer
-Panel
+HBoxContainer
+TextureButton
+Label
 OptionButton
+ItemList
+Sprite2D
+Panel
+AcceptDialog
+ProgressBar
+HSplitContainer
 ScrollContainer
 TabContainer
 Window
@@ -15,6 +19,5 @@ Popup
 PopupPanel
 Control
 VScrollBar
-Sprite2D
 FlowContainer
 TileMap

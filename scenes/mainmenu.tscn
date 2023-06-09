@@ -56,4 +56,12 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Quit Game"
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1144.0
+offset_top = 688.0
+offset_right = 1272.0
+offset_bottom = 752.0
+text = "CREDITS"
+
 [connection signal="pressed" from="NewGameBtn" to="." method="_on_new_game_btn_pressed"]

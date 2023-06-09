@@ -36,7 +36,8 @@ func saveGame():
 		"huntersCamp": Global.huntersCamp,
 		"dolmen": Global.dolmen,
 		"dominionLevel": Global.dominionLevel,
-		"maxDominionLevel": Global.maxDominionLevel
+		"maxDominionLevel": Global.maxDominionLevel,
+		"thatchGatherRate": Global.thatchGatherRate,
 	}
 	var jstr = JSON.stringify(data)
 	file.store_line(jstr)
@@ -70,6 +71,7 @@ func loadGame():
 				Global.flint = current_line["flint"]
 				Global.flintGatherRate = current_line["flintGatherRate"]
 				Global.thatch = current_line["thatch"]
+				Global.thatchGatherRate = current_line["thatchGatherRate"]
 				Global.huntingBonus = current_line["huntingBonus"]
 				Global.timberCamp = current_line["timberCamp"]
 				Global.flintCamp = current_line["flintCamp"]

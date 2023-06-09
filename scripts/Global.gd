@@ -6,13 +6,20 @@ var rng = RandomNumberGenerator.new()
 var resourceAlert = false
 var gameDialogTitle = ""
 var gameDialogText = ""
+var gameDialogBonusText = ""
 
+var sickTrait
+var sickTraitText = "You are terribly sick."
+var humbleTrait
+var humbleTraitText = "Humble as they come."
 
 #---TIME STUFF----------------------------------------
 var monthCheck = 0
 var currentDay = 85
 var year = 0
 var currentSeason # Don't need to save
+var seasonBonus = 0
+var seasonMalus
 var stringSeason # Don't need to save
 
 #----Population Stuff-------------------------------
@@ -26,6 +33,11 @@ var cultureText = "" # Don't need to save
 var civilizedLevel = ""
 var newPop = 0 # Don't need to save
 var newBaby # Don't need to save
+
+var hunterGathererPops = 0
+var tribalPops = 0
+var slavePops = 0
+var noblePops = 0
 #---Food Stuff---------------------------------------
 var foodConsumption = 1
 var foragedFood = 0
@@ -46,6 +58,8 @@ var flint = 50
 var flintGatherRate = 0
 
 var thatch = 200
+var thatchGatherRate = 0
+
 var wildBerries = 100
 var wildMeat = 50
 var huntingBonus = 0
@@ -59,6 +73,21 @@ var dolmen = 0
 #-------Progress Level Values------------------------
 var dominionLevel = 1
 var maxDominionLevel = 10
+#-----Government Stuff--------------------------------
+var tribalism = false
+var moneyName = ""
+#---Leader Stuff------------------------------------
+var rulerName = ""
+var rulerInt = 0
+var rulerStr = 0
+var rulerCha = 0
+var rulerHealth = 100
+var rulerTrait1 = 0
+var rulerTrait2 = 0
+var rulerTrait3 = 0
+var rulerTrait4 = 0
+var rulerTrait5 = 0
+var rulerTreasury = 0
 #----Hunger Functions-------------------------------
 func AutoForage():
 	rng.randomize()
@@ -66,8 +95,8 @@ func AutoForage():
 	stone += rng.randf_range(0,2)
 	flint += rng.randf_range(0,1)
 	water += rng.randf_range(20,40) + (femalePopulation + waterGatherRate)
-	wildBerries += rng.randf_range(10,20) + femalePopulation + foragingBonus
-	wildMeat += rng.randf_range(8,15) + malePopulation + huntingBonus
+	wildBerries += (rng.randf_range(10,20) + (femalePopulation + foragingBonus)) * seasonBonus
+	wildMeat += rng.randf_range(8,15) + malePopulation + huntingBonus + GlobalResearch.knappingBonus * seasonBonus
 
 func ForagerFoodConsumption():
 	wildBerries -= provincePopulation
@@ -92,9 +121,18 @@ func StarvationCheck():
 func IsStarving():
 	if (isStarving == true) and (starvingDays >= 3):
 		rng.randomize()
-		malePopulation -= rng.randf_range(0,2)
-		femalePopulation -= rng.randf_range(0,2)
+		malePopulation -= rng.randi_range(0,2)
+		femalePopulation -= rng.randi_range(0,2)
 
+func SeasonalBonuses():
+	if(currentSeason == 1):
+		seasonBonus = 0
+	elif(currentSeason == 2):
+		seasonBonus = 1.2
+	elif(currentSeason == 3):
+		seasonBonus = 2
+	elif(currentSeason == 4):
+		seasonBonus = 1.6
 
 #----Population Functions----------------------------
 func PopulationGrowth():
@@ -124,6 +162,12 @@ func CheckCulture():
 		cultureText = "Faiyum"
 	elif (culture == 3):
 		cultureText = "Vinca"
+		
+func SocialStatusSpread():
+	if (GlobalResearch.hunterGathererIdea == 1):
+		hunterGathererPops = malePopulation + femalePopulation + childrenPopulation
+	if (tribalism == true):
+		tribalPops = malePopulation + femalePopulation + childrenPopulation
 #----Day Functions-----------------------------------
 func EndDay():
 	if (currentDay <= 365):
@@ -216,13 +260,14 @@ func BuildHuntersCamp():
 		gameDialogText = "You do not have enough resources to complete this building!"
 
 func BuildDolmen():
-	if (timber >= 120) and (stone >= 240) and (flint >= 100):
-		timber -= 100
-		stone -= 240 
-		flint -= 100
-		dolmen += 1
-		dominionLevel += 1
-		GlobalResearch.research += 0.01
+	if(provincePopulation >= 25) and (dolmen <= (provincePopulation * 0.05)):
+		if (timber >= 120) and (stone >= 240) and (flint >= 100):
+			timber -= 100
+			stone -= 240 
+			flint -= 100
+			dolmen += 1
+			dominionLevel += 1
+			GlobalResearch.research += 0.01
 	else:
 		resourceAlert = true
 		gameDialogTitle = "Not enough resources!"

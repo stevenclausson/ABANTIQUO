@@ -50,57 +50,59 @@ text = "Year:"
 
 [node name="Button" type="Button" parent="TopPanel"]
 layout_mode = 0
-offset_right = 94.0
+offset_left = 1184.0
+offset_right = 1278.0
 offset_bottom = 31.0
 text = "Save Game"
 
 [node name="LoadGameBtn" type="Button" parent="TopPanel"]
 layout_mode = 0
+offset_left = 1184.0
 offset_top = 40.0
-offset_right = 96.0
+offset_right = 1280.0
 offset_bottom = 71.0
 text = "Load Game"
 
 [node name="LeaderBtn" type="Button" parent="TopPanel"]
 layout_mode = 0
-offset_left = 128.0
-offset_right = 190.0
+offset_left = 8.0
+offset_right = 70.0
 offset_bottom = 31.0
 disabled = true
 text = "Leader"
 
 [node name="GovernmentBtn" type="Button" parent="TopPanel"]
 layout_mode = 0
-offset_left = 256.0
-offset_right = 318.0
+offset_left = 128.0
+offset_right = 234.0
 offset_bottom = 31.0
 disabled = true
 text = "Government"
 
 [node name="ResearchBtn" type="Button" parent="TopPanel"]
 layout_mode = 0
-offset_left = 128.0
+offset_left = 8.0
 offset_top = 40.0
-offset_right = 190.0
+offset_right = 87.0
 offset_bottom = 71.0
 disabled = true
 text = "Research"
 
 [node name="DiplomacyBTn" type="Button" parent="TopPanel"]
 layout_mode = 0
-offset_left = 256.0
+offset_left = 128.0
 offset_top = 40.0
-offset_right = 335.0
+offset_right = 218.0
 offset_bottom = 71.0
 disabled = true
 text = "Diplomacy"
 
 [node name="VersionBtn" type="Button" parent="TopPanel"]
 layout_mode = 0
-offset_left = 640.0
-offset_top = 8.0
-offset_right = 750.0
-offset_bottom = 39.0
+offset_left = 1168.0
+offset_top = 80.0
+offset_right = 1278.0
+offset_bottom = 111.0
 text = "version: 0.0.1"
 
 [node name="DominionBar" type="ProgressBar" parent="TopPanel"]
@@ -139,23 +141,99 @@ text = "Dominion"
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 0
-offset_left = 704.0
-offset_top = 80.0
-offset_right = 1144.0
-offset_bottom = 632.0
+offset_left = 832.0
+offset_top = 120.0
+offset_right = 1272.0
+offset_bottom = 744.0
 clip_tabs = false
 
 [node name="Population" type="ScrollContainer" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Population"]
 custom_minimum_size = Vector2(420, 500)
 layout_mode = 2
 
-[node name="PopOverviewLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+[node name="PopDetailsBtn" type="Button" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+text = "Population Details"
+
+[node name="PopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
+text = "-Population at a glance-"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MalePopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Male:"
+autowrap_mode = 2
+
+[node name="FemalePopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Female:"
+autowrap_mode = 2
+
+[node name="AgeLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "-Ages-"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ChildrenPopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Children:"
+autowrap_mode = 2
+
+[node name="AdultPopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Adults:"
+autowrap_mode = 2
+
+[node name="ElderlyPopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Elderly:"
+autowrap_mode = 2
+
+[node name="SocialPopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "-Social Status-"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="NoblePopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 1
+text = "Nobles:"
+autowrap_mode = 2
+
+[node name="TribesmenPopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 1
+text = "Tribesmen:"
+autowrap_mode = 2
+
+[node name="HunterGatherPopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Hunter-Gatherers:"
+autowrap_mode = 2
+
+[node name="SlavePopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 1
+text = "Slaves:"
 autowrap_mode = 2
 
 [node name="Resources" type="ScrollContainer" parent="TabContainer"]
@@ -203,6 +281,7 @@ layout_mode = 2
 text = "Water:"
 
 [node name="Buildings" type="ScrollContainer" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Buildings"]
@@ -219,7 +298,7 @@ offset_left = 128.0
 offset_top = 1.0
 offset_right = 168.0
 offset_bottom = 27.0
-text = ":0"
+text = ": 0"
 
 [node name="FlintCampBtn" type="Button" parent="TabContainer/Buildings/VBoxContainer"]
 layout_mode = 2
@@ -232,7 +311,7 @@ offset_left = 128.0
 offset_top = 1.0
 offset_right = 168.0
 offset_bottom = 27.0
-text = ":0"
+text = ": 0"
 
 [node name="StoneCampBtn" type="Button" parent="TabContainer/Buildings/VBoxContainer"]
 layout_mode = 2
@@ -245,7 +324,7 @@ offset_left = 128.0
 offset_top = 1.0
 offset_right = 168.0
 offset_bottom = 27.0
-text = ":0"
+text = ": 0"
 
 [node name="PrimitiveWellBtn" type="Button" parent="TabContainer/Buildings/VBoxContainer"]
 layout_mode = 2
@@ -258,7 +337,7 @@ offset_left = 128.0
 offset_top = 1.0
 offset_right = 168.0
 offset_bottom = 27.0
-text = ":0"
+text = ": 0"
 
 [node name="HuntersCampBtn" type="Button" parent="TabContainer/Buildings/VBoxContainer"]
 layout_mode = 2
@@ -271,7 +350,21 @@ offset_left = 128.0
 offset_top = 1.0
 offset_right = 168.0
 offset_bottom = 27.0
-text = ":0"
+text = ": 0"
+
+[node name="DolmenBtn" type="Button" parent="TabContainer/Buildings/VBoxContainer"]
+visible = false
+layout_mode = 2
+tooltip_text = "Increases output gained from foraging/hunting"
+text = "Dolmen"
+
+[node name="DolmenLbl" type="Label" parent="TabContainer/Buildings/VBoxContainer/DolmenBtn"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 1.0
+offset_right = 168.0
+offset_bottom = 27.0
+text = ": 0"
 
 [node name="InfoPanel" type="ScrollContainer" parent="."]
 layout_mode = 0
@@ -299,6 +392,21 @@ dialog_text = "July 1, 2023 - 0.0.1
 
 [node name="GameDialog" type="AcceptDialog" parent="."]
 position = Vector2i(250, 200)
+size = Vector2i(100, 113)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameDialog"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 92.0
+offset_bottom = 64.0
+
+[node name="TextLbl" type="Label" parent="GameDialog/VBoxContainer"]
+layout_mode = 2
+text = "Text"
+
+[node name="BonusLbl" type="Label" parent="GameDialog/VBoxContainer"]
+layout_mode = 2
+text = "Text"
 
 [connection signal="pressed" from="TopPanel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TopPanel/LoadGameBtn" to="." method="_on_load_game_btn_pressed"]
@@ -308,3 +416,4 @@ position = Vector2i(250, 200)
 [connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/StoneCampBtn" to="." method="_on_stone_camp_btn_pressed"]
 [connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/PrimitiveWellBtn" to="." method="_on_primitive_well_btn_pressed"]
 [connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/HuntersCampBtn" to="." method="_on_hunters_camp_btn_pressed"]
+[connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/DolmenBtn" to="." method="_on_dolmen_btn_pressed"]

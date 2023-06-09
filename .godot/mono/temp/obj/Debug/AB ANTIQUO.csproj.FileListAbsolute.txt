@@ -1,0 +1,17 @@
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.csproj.AssemblyReference.cache
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.AssemblyInfoInputs.cache
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.AssemblyInfo.cs
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.csproj.CoreCompileInputs.cache
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\bin\Debug\AB ANTIQUO.deps.json
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\bin\Debug\AB ANTIQUO.runtimeconfig.json
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\bin\Debug\AB ANTIQUO.dll
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\bin\Debug\AB ANTIQUO.pdb
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\bin\Debug\GodotSharp.dll
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.csproj.CopyComplete
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.dll
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\refint\AB ANTIQUO.dll
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.pdb
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.genruntimeconfig.cache
+E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\ref\AB ANTIQUO.dll
