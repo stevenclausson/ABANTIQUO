@@ -22,17 +22,17 @@ var message3 = "Vinca were an extensive European culture noted for it's settleme
 
 func _on_option_button_item_selected(index):
 	if (index == 0):
-		$OptionButton/MessageLbl.text = message0
+		$CanvasLayer/OptionButton/MessageLbl.text = message0
 		Global.culture = 0
 	elif(index == 1):
 		Global.culture = 1
-		$OptionButton/MessageLbl.text = message1
+		$CanvasLayer/OptionButton/MessageLbl.text = message1
 	elif(index == 2):
 		Global.culture = 2
-		$OptionButton/MessageLbl.text = message2
+		$CanvasLayer/OptionButton/MessageLbl.text = message2
 	elif(index == 3):
 		Global.culture = 3
-		$OptionButton/MessageLbl.text = message3
+		$CanvasLayer/OptionButton/MessageLbl.text = message3
 
 
 func _on_game_btn_pressed():

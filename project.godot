@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="AB ANTIQUO"
-config/features=PackedStringArray("4.0", "C#", "Forward Plus")
+config/features=PackedStringArray("4.1", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -23,10 +23,10 @@ GlobalC="*res://scripts/GlobalC.cs"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=760
-window/size/window_width_override=1200
-window/size/window_height_override=800
+window/size/viewport_width=1440
+window/size/viewport_height=968
+window/size/window_width_override=1440
+window/size/window_height_override=968
 
 [dotnet]
 

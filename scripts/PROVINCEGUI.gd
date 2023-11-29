@@ -29,7 +29,7 @@ func _on_Timer_timeout():
 
 func _on_EventTimer_timeout():
 	GlobalResearch.research += 1
-	print(GlobalResearch.research)
+	print("Research amount " + str(GlobalResearch.research))
 
 func DisplayData():
 	$TopPanel/DayLbl.text = "Day: " + str(Global.currentDay)

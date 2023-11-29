@@ -13,6 +13,13 @@ var sickTraitText = "You are terribly sick."
 var humbleTrait
 var humbleTraitText = "Humble as they come."
 
+#---CULTURE STUFF-------------------------------------
+var culture
+var cultureText = "" # Don't need to save
+var cultureBonus1 = 0
+var cultureBonus2 = 0
+var cultureBonus3 = 0
+
 #---TIME STUFF----------------------------------------
 var monthCheck = 0
 var currentDay = 85
@@ -28,12 +35,9 @@ var femalePopulation = 10
 var childrenPopulation = 0
 var provincePopulation # Don't need to save
 var populationGrowthRate = 0.006
-var culture
-var cultureText = "" # Don't need to save
 var civilizedLevel = ""
 var newPop = 0 # Don't need to save
 var newBaby # Don't need to save
-
 var hunterGathererPops = 0
 var tribalPops = 0
 var slavePops = 0
@@ -94,7 +98,7 @@ func AutoForage():
 	timber += rng.randf_range(0,1)
 	stone += rng.randf_range(0,2)
 	flint += rng.randf_range(0,1)
-	water += rng.randf_range(20,40) + (femalePopulation + waterGatherRate)
+	water += rng.randf_range(20,40) + (femalePopulation + waterGatherRate) + cultureBonus3
 	wildBerries += (rng.randf_range(10,20) + (femalePopulation + foragingBonus)) * seasonBonus
 	wildMeat += rng.randf_range(8,15) + malePopulation + huntingBonus + GlobalResearch.knappingBonus * seasonBonus
 
@@ -156,12 +160,24 @@ func MakeABaby():
 func CheckCulture():
 	if (culture == 0):
 		cultureText = "Daxi"
+		var cultureBonus1 = 0.002 #Population growth
+		var cultureBonus2 = 50 #City Defense
+		var cultureBonus3 = 5 #Rice output
 	elif(culture == 1):
 		cultureText = "Yarmukian"
+		var cultureBonus1 = 8 #Pottery
+		var cultureBonus2 = 2 #Administration
+		var cultureBonus3 = 5 #Water Output
 	elif (culture == 2):
 		cultureText = "Faiyum"
+		var cultureBonus1 = 10 #Grain Output
+		var cultureBonus2 = 2 #Weaving
+		var cultureBonus3 = 5 #Foraging
 	elif (culture == 3):
 		cultureText = "Vinca"
+		var cultureBonus1 = 8 # Wheat
+		var cultureBonus2 = 0.002 # Pop Growth
+		var cultureBonus3 = 5 #Barley Production
 		
 func SocialStatusSpread():
 	if (GlobalResearch.hunterGathererIdea == 1):

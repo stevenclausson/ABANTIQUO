@@ -1,6 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://cb6885k6ba3vu"]
+[gd_scene load_steps=9 format=3 uid="uid://cb6885k6ba3vu"]
 
 [ext_resource type="Script" path="res://scenes/mainmenu.gd" id="1_36tbh"]
+[ext_resource type="Texture2D" uid="uid://0gm6216473fa" path="res://art/backgrounds/meadow.jpg" id="2_ekpk4"]
+[ext_resource type="Texture2D" uid="uid://cbq7g4xklpeox" path="res://art/icons/buttonLong_beige.png" id="2_ptnns"]
+[ext_resource type="Texture2D" uid="uid://dk3k2ivv4cpdt" path="res://art/icons/buttonLong_beige_pressed.png" id="3_oig2v"]
+[ext_resource type="FontFile" uid="uid://dc4ilq0qaalxu" path="res://art/fonts/CormorantGaramond-Bold.ttf" id="5_vc7fq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8d3qx"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(1, 1, 1, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vsrpn"]
+font = ExtResource("5_vc7fq")
+font_size = 75
+font_color = Color(0.886275, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_egx0i"]
+font = ExtResource("5_vc7fq")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
 
 [node name="mainmenu" type="Control"]
 layout_mode = 3
@@ -11,57 +30,99 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_36tbh")
 
-[node name="NewGameBtn" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -46.5
-offset_top = -20.0
-offset_right = 46.5
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "New Game"
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="LoadGameBtn" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = 44.0
-offset_right = 48.0
-offset_bottom = 75.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Load Game"
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(724.125, 486.625)
+scale = Vector2(1.06457, 1.06504)
+texture = ExtResource("2_ekpk4")
 
-[node name="QuitGameBtn" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = 108.0
-offset_right = 48.0
-offset_bottom = 139.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Quit Game"
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1144.0
-offset_top = 688.0
-offset_right = 1272.0
-offset_bottom = 752.0
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 1304.0
+offset_top = 888.0
+offset_right = 1432.0
+offset_bottom = 952.0
 text = "CREDITS"
 
-[connection signal="pressed" from="NewGameBtn" to="." method="_on_new_game_btn_pressed"]
+[node name="Button2" type="Button" parent="CanvasLayer"]
+offset_left = 8.0
+offset_top = 912.0
+offset_right = 136.0
+offset_bottom = 944.0
+text = "Changelog
+"
+
+[node name="NewGameBtn" type="TextureButton" parent="CanvasLayer"]
+offset_left = 624.0
+offset_top = 440.0
+offset_right = 814.0
+offset_bottom = 489.0
+texture_normal = ExtResource("2_ptnns")
+texture_pressed = ExtResource("3_oig2v")
+
+[node name="Label" type="Label" parent="CanvasLayer/NewGameBtn"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 8.0
+offset_right = 161.0
+offset_bottom = 45.0
+text = "NEW GAME"
+label_settings = SubResource("LabelSettings_8d3qx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoadGameBtn" type="TextureButton" parent="CanvasLayer"]
+offset_left = 624.0
+offset_top = 512.0
+offset_right = 814.0
+offset_bottom = 561.0
+texture_normal = ExtResource("2_ptnns")
+texture_pressed = ExtResource("3_oig2v")
+
+[node name="Label" type="Label" parent="CanvasLayer/LoadGameBtn"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 164.0
+offset_bottom = 45.0
+text = "LOAD GAME"
+label_settings = SubResource("LabelSettings_8d3qx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuitBtn" type="TextureButton" parent="CanvasLayer"]
+offset_left = 624.0
+offset_top = 584.0
+offset_right = 814.0
+offset_bottom = 633.0
+texture_normal = ExtResource("2_ptnns")
+texture_pressed = ExtResource("3_oig2v")
+
+[node name="Label" type="Label" parent="CanvasLayer/QuitBtn"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 8.0
+offset_right = 161.0
+offset_bottom = 45.0
+text = "QUIT"
+label_settings = SubResource("LabelSettings_8d3qx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleLbl" type="Label" parent="CanvasLayer"]
+offset_left = 488.0
+offset_top = 248.0
+offset_right = 960.0
+offset_bottom = 343.0
+text = "AB ANTIQUO"
+label_settings = SubResource("LabelSettings_vsrpn")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 648.0
+offset_top = 352.0
+offset_right = 776.0
+offset_bottom = 392.0
+text = "version: 0.0.1"
+label_settings = SubResource("LabelSettings_egx0i")
+
+[connection signal="pressed" from="CanvasLayer/NewGameBtn" to="." method="_on_new_game_btn_pressed"]

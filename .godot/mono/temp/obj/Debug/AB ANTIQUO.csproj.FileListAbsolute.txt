@@ -15,3 +15,20 @@ E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\refint\AB ANTI
 E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.pdb
 E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.genruntimeconfig.cache
 E:\Rumblingsauce Games\GAMES\ABANTIQUO\.godot\mono\temp\obj\Debug\ref\AB ANTIQUO.dll
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\bin\Debug\AB ANTIQUO.deps.json
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\bin\Debug\AB ANTIQUO.runtimeconfig.json
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\bin\Debug\AB ANTIQUO.dll
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\bin\Debug\AB ANTIQUO.pdb
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.csproj.AssemblyReference.cache
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.AssemblyInfoInputs.cache
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.AssemblyInfo.cs
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.csproj.CoreCompileInputs.cache
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.csproj.CopyComplete
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.dll
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\refint\AB ANTIQUO.dll
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.pdb
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.genruntimeconfig.cache
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\ref\AB ANTIQUO.dll

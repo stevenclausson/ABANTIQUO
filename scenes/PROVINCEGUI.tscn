@@ -1,15 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://cx7ypwxw8h03w"]
+[gd_scene load_steps=3 format=3 uid="uid://cx7ypwxw8h03w"]
 
 [ext_resource type="Script" path="res://scripts/PROVINCEGUI.gd" id="1_g67a7"]
+[ext_resource type="Texture2D" uid="uid://b2htn0haa31hw" path="res://art/backgrounds/AIBackground2.jpg" id="2_odfq4"]
 
 [node name="ProvinceGui" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g67a7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.286275)
+show_behind_parent = true
+position = Vector2(732, 436)
+scale = Vector2(1.42969, 1.07031)
+texture = ExtResource("2_odfq4")
 
 [node name="AcceptDialog" type="AcceptDialog" parent="."]
 title = "WAIT!"
@@ -23,7 +33,8 @@ Please. It's OK."
 
 [node name="TopPanel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 1150.0
+offset_left = 160.0
+offset_right = 1310.0
 offset_bottom = 76.0
 
 [node name="SeasonLbl" type="Label" parent="TopPanel"]
@@ -50,67 +61,25 @@ text = "Year:"
 
 [node name="Button" type="Button" parent="TopPanel"]
 layout_mode = 0
-offset_left = 1184.0
-offset_right = 1278.0
-offset_bottom = 31.0
+offset_left = -152.0
+offset_top = 8.0
+offset_right = -58.0
+offset_bottom = 39.0
 text = "Save Game"
 
 [node name="LoadGameBtn" type="Button" parent="TopPanel"]
 layout_mode = 0
-offset_left = 1184.0
-offset_top = 40.0
-offset_right = 1280.0
-offset_bottom = 71.0
+offset_left = 1200.0
+offset_top = 8.0
+offset_right = 1296.0
+offset_bottom = 39.0
 text = "Load Game"
-
-[node name="LeaderBtn" type="Button" parent="TopPanel"]
-layout_mode = 0
-offset_left = 8.0
-offset_right = 70.0
-offset_bottom = 31.0
-disabled = true
-text = "Leader"
-
-[node name="GovernmentBtn" type="Button" parent="TopPanel"]
-layout_mode = 0
-offset_left = 128.0
-offset_right = 234.0
-offset_bottom = 31.0
-disabled = true
-text = "Government"
-
-[node name="ResearchBtn" type="Button" parent="TopPanel"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 40.0
-offset_right = 87.0
-offset_bottom = 71.0
-disabled = true
-text = "Research"
-
-[node name="DiplomacyBTn" type="Button" parent="TopPanel"]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 40.0
-offset_right = 218.0
-offset_bottom = 71.0
-disabled = true
-text = "Diplomacy"
-
-[node name="VersionBtn" type="Button" parent="TopPanel"]
-layout_mode = 0
-offset_left = 1168.0
-offset_top = 80.0
-offset_right = 1278.0
-offset_bottom = 111.0
-text = "version: 0.0.1"
 
 [node name="DominionBar" type="ProgressBar" parent="TopPanel"]
 layout_mode = 0
-offset_left = 504.0
-offset_top = 48.0
-offset_right = 704.0
-offset_bottom = 75.0
+offset_left = 432.0
+offset_right = 632.0
+offset_bottom = 27.0
 tooltip_text = "Area in which you can build. Research and grow to increase your domain."
 mouse_filter = 1
 value = 1.0
@@ -141,10 +110,10 @@ text = "Dominion"
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 0
-offset_left = 832.0
-offset_top = 120.0
-offset_right = 1272.0
-offset_bottom = 744.0
+offset_left = 968.0
+offset_top = 128.0
+offset_right = 1408.0
+offset_bottom = 752.0
 clip_tabs = false
 
 [node name="Population" type="ScrollContainer" parent="TabContainer"]
@@ -368,10 +337,10 @@ text = ": 0"
 
 [node name="InfoPanel" type="ScrollContainer" parent="."]
 layout_mode = 0
-offset_left = 8.0
+offset_left = 168.0
 offset_top = 80.0
-offset_right = 576.0
-offset_bottom = 384.0
+offset_right = 768.0
+offset_bottom = 448.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="InfoPanel"]
 layout_mode = 2
@@ -394,6 +363,13 @@ dialog_text = "July 1, 2023 - 0.0.1
 position = Vector2i(250, 200)
 size = Vector2i(100, 113)
 
+[node name="ColorRect" type="ColorRect" parent="GameDialog"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 92.0
+offset_bottom = 64.0
+color = Color(0.478431, 0.478431, 0.478431, 0.682353)
+
 [node name="VBoxContainer" type="VBoxContainer" parent="GameDialog"]
 offset_left = 8.0
 offset_top = 8.0
@@ -402,15 +378,57 @@ offset_bottom = 64.0
 
 [node name="TextLbl" type="Label" parent="GameDialog/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Text"
 
 [node name="BonusLbl" type="Label" parent="GameDialog/VBoxContainer"]
 layout_mode = 2
 text = "Text"
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 128.0
+offset_bottom = 768.0
+
+[node name="LeaderBtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 112.0
+offset_bottom = 39.0
+disabled = true
+text = "Leader"
+
+[node name="GovernmentBtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 104.0
+offset_right = 114.0
+offset_bottom = 135.0
+disabled = true
+text = "Government"
+
+[node name="ResearchBtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 112.0
+offset_bottom = 87.0
+disabled = true
+text = "Research"
+
+[node name="DiplomacyBTn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 152.0
+offset_right = 112.0
+offset_bottom = 183.0
+disabled = true
+text = "Diplomacy"
+
 [connection signal="pressed" from="TopPanel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TopPanel/LoadGameBtn" to="." method="_on_load_game_btn_pressed"]
-[connection signal="pressed" from="TopPanel/VersionBtn" to="." method="_on_version_btn_pressed"]
 [connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/TimberCampBtn" to="." method="_on_timber_camp_btn_pressed"]
 [connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/FlintCampBtn" to="." method="_on_flint_camp_btn_pressed"]
 [connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/StoneCampBtn" to="." method="_on_stone_camp_btn_pressed"]

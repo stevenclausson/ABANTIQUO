@@ -1,26 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Rumblingsauce Games\\GAMES\\ABANTIQUO\\AB ANTIQUO.csproj": {}
+    "C:\\Users\\Steve\\Documents\\Rumbling Game Studio\\Projects\\AB HINC\\ABANTIQUO\\AB ANTIQUO.csproj": {}
   },
   "projects": {
-    "E:\\Rumblingsauce Games\\GAMES\\ABANTIQUO\\AB ANTIQUO.csproj": {
+    "C:\\Users\\Steve\\Documents\\Rumbling Game Studio\\Projects\\AB HINC\\ABANTIQUO\\AB ANTIQUO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Rumblingsauce Games\\GAMES\\ABANTIQUO\\AB ANTIQUO.csproj",
+        "projectUniqueName": "C:\\Users\\Steve\\Documents\\Rumbling Game Studio\\Projects\\AB HINC\\ABANTIQUO\\AB ANTIQUO.csproj",
         "projectName": "AB ANTIQUO",
-        "projectPath": "E:\\Rumblingsauce Games\\GAMES\\ABANTIQUO\\AB ANTIQUO.csproj",
+        "projectPath": "C:\\Users\\Steve\\Documents\\Rumbling Game Studio\\Projects\\AB HINC\\ABANTIQUO\\AB ANTIQUO.csproj",
         "packagesPath": "C:\\Users\\Steve\\.nuget\\packages\\",
-        "outputPath": "E:\\Rumblingsauce Games\\GAMES\\ABANTIQUO\\.godot\\mono\\temp\\obj\\",
+        "outputPath": "C:\\Users\\Steve\\Documents\\Rumbling Game Studio\\Projects\\AB HINC\\ABANTIQUO\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Users\\Steve\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Steve\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Users\\Steve\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -48,15 +42,15 @@
           "dependencies": {
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.0.3, )"
+              "version": "[4.1.2, )"
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.0.3, )"
+              "version": "[4.1.2, )"
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.0.3, )"
+              "version": "[4.1.2, )"
             }
           },
           "imports": [
@@ -75,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
