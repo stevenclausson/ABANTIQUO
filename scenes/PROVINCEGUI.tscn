@@ -1,14 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cx7ypwxw8h03w"]
+[gd_scene load_steps=4 format=3 uid="uid://cx7ypwxw8h03w"]
 
 [ext_resource type="Script" path="res://scripts/PROVINCEGUI.gd" id="1_g67a7"]
 [ext_resource type="Texture2D" uid="uid://b2htn0haa31hw" path="res://art/backgrounds/AIBackground2.jpg" id="2_odfq4"]
+[ext_resource type="PackedScene" uid="uid://8b3khatbicqj" path="res://scenes/RulerScene.tscn" id="3_1nvf8"]
 
 [node name="ProvinceGui" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 8.0
 offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -17,7 +17,7 @@ script = ExtResource("1_g67a7")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.286275)
 show_behind_parent = true
-position = Vector2(732, 436)
+position = Vector2(731.999, 436)
 scale = Vector2(1.42969, 1.07031)
 texture = ExtResource("2_odfq4")
 
@@ -61,18 +61,16 @@ text = "Year:"
 
 [node name="Button" type="Button" parent="TopPanel"]
 layout_mode = 0
-offset_left = -152.0
-offset_top = 8.0
-offset_right = -58.0
-offset_bottom = 39.0
+offset_left = -104.0
+offset_right = -10.0
+offset_bottom = 31.0
 text = "Save Game"
 
 [node name="LoadGameBtn" type="Button" parent="TopPanel"]
 layout_mode = 0
-offset_left = 1200.0
-offset_top = 8.0
-offset_right = 1296.0
-offset_bottom = 39.0
+offset_left = 1160.0
+offset_right = 1256.0
+offset_bottom = 31.0
 text = "Load Game"
 
 [node name="DominionBar" type="ProgressBar" parent="TopPanel"]
@@ -153,16 +151,40 @@ text = "-Ages-"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="ChildrenPopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+[node name="MaleBabyPopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
-text = "Children:"
+text = "Babies:"
 autowrap_mode = 2
 
-[node name="AdultPopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+[node name="FemaleBabyPopsLbl2" type="Label" parent="TabContainer/Population/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
-text = "Adults:"
+text = "Babies:"
+autowrap_mode = 2
+
+[node name="MaleChildrenPopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Boys:"
+autowrap_mode = 2
+
+[node name="FemaleChildrenPopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Girls:"
+autowrap_mode = 2
+
+[node name="AdultMalePopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Adult Men:"
+autowrap_mode = 2
+
+[node name="AdultFemalePopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Adult Women:"
 autowrap_mode = 2
 
 [node name="ElderlyPopsLbl" type="Label" parent="TabContainer/Population/VBoxContainer"]
@@ -233,6 +255,10 @@ text = "Stone:"
 [node name="ThatchLbl" type="Label" parent="TabContainer/Resources/HSplitContainer/VBoxContainer"]
 layout_mode = 2
 text = "Thatch:"
+
+[node name="WildHidesLbl" type="Label" parent="TabContainer/Resources/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+text = "Wild Hides:"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="TabContainer/Resources/HSplitContainer"]
 layout_mode = 2
@@ -397,7 +423,6 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 112.0
 offset_bottom = 39.0
-disabled = true
 text = "Leader"
 
 [node name="GovernmentBtn" type="Button" parent="Panel"]
@@ -427,6 +452,13 @@ offset_bottom = 183.0
 disabled = true
 text = "Diplomacy"
 
+[node name="LeaderWindow" type="Window" parent="."]
+position = Vector2i(120, 80)
+size = Vector2i(800, 800)
+visible = false
+
+[node name="RulerScene" parent="LeaderWindow" instance=ExtResource("3_1nvf8")]
+
 [connection signal="pressed" from="TopPanel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TopPanel/LoadGameBtn" to="." method="_on_load_game_btn_pressed"]
 [connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/TimberCampBtn" to="." method="_on_timber_camp_btn_pressed"]
@@ -435,3 +467,5 @@ text = "Diplomacy"
 [connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/PrimitiveWellBtn" to="." method="_on_primitive_well_btn_pressed"]
 [connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/HuntersCampBtn" to="." method="_on_hunters_camp_btn_pressed"]
 [connection signal="pressed" from="TabContainer/Buildings/VBoxContainer/DolmenBtn" to="." method="_on_dolmen_btn_pressed"]
+[connection signal="pressed" from="Panel/LeaderBtn" to="." method="_on_leader_btn_pressed"]
+[connection signal="close_requested" from="LeaderWindow" to="." method="_on_leader_window_close_requested"]

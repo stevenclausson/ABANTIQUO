@@ -15,4 +15,9 @@ public partial class GlobalC : Node
 	{
 		
 	}
+	
+	public static void Test()
+	{
+		Console.WriteLine("Test C# stuff.");
+	}
 }

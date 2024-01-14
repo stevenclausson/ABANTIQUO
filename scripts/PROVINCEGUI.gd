@@ -12,6 +12,7 @@ func _ready():
 	eventTimer.set_wait_time(5)
 	eventTimer.connect("timeout", Callable(self,"_on_EventTimer_timeout"))
 	eventTimer.start()
+	
 
 func _on_Timer_timeout():
 	Global.EndDay()
@@ -46,6 +47,7 @@ func DisplayData():
 	$TabContainer/Resources/HSplitContainer/VBoxContainer/TimberLbl.text = "Timber: " + str(floor(Global.timber))
 	$TabContainer/Resources/HSplitContainer/VBoxContainer/FlintLbl.text = "Flint :" + str(floor(Global.flint))
 	$TabContainer/Resources/HSplitContainer/VBoxContainer/StoneLbl.text = "Stone: " + str(floor(Global.stone))
+	$TabContainer/Resources/HSplitContainer/VBoxContainer/WildHidesLbl.text = "Wild Hides: " + str(floor(Global.wildHides))
 	$TabContainer/Resources/HSplitContainer/VBoxContainer/ThatchLbl.text = "Thatch: " + str(floor(Global.thatch))
 	#Buildings
 	$TabContainer/Buildings/VBoxContainer/TimberCampBtn/TimberCampLbl.text = ": " + str(Global.timberCamp)
@@ -64,6 +66,12 @@ func DisplayData():
 	$TopPanel/DominionBar/CurrentDominionLbl.text = str(Global.dominionLevel)
 	$TabContainer/Population/VBoxContainer/MalePopsLbl.text = "Males: " + str(Global.malePopulation)
 	$TabContainer/Population/VBoxContainer/FemalePopsLbl.text = "Females: " + str(Global.femalePopulation)
+	$TabContainer/Population/VBoxContainer/AdultMalePopsLbl.text = "Adult Males: " + str(Global.adultMalePopulation)
+	$TabContainer/Population/VBoxContainer/AdultFemalePopsLbl.text = "Adult Females: " + str(Global.adultFemalePopulation)
+	$TabContainer/Population/VBoxContainer/MaleBabyPopsLbl.text = "Male Babies: " + str(Global.maleBabyPopulation)
+	$TabContainer/Population/VBoxContainer/FemaleBabyPopsLbl2.text = "Female Babies: " + str(Global.femaleBabyPopulation)
+	$TabContainer/Population/VBoxContainer/MaleChildrenPopsLbl.text = "Male Children: " + str(Global.maleChildrenPopulation)
+	$TabContainer/Population/VBoxContainer/FemaleChildrenPopsLbl.text = "Female Children: " + str(Global.femaleChildrenPopulation)
 	$TabContainer/Population/VBoxContainer/TribesmenPopsLbl.text = "Tribesmen: " + str(Global.tribalPops)
 	
 func DisplayControls():
@@ -119,3 +127,11 @@ func _on_hunters_camp_btn_pressed():
 func _on_dolmen_btn_pressed():
 	Global.BuildDolmen()
 	$TabContainer/Buildings/VBoxContainer/DolmenBtn/DolmenLbl.text = ": " + str(Global.dolmen)
+
+
+func _on_leader_btn_pressed():
+	$LeaderWindow.visible = true
+
+
+func _on_leader_window_close_requested():
+	$LeaderWindow.visible = false

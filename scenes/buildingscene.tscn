@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbp581eaywve"]
+[gd_scene load_steps=3 format=3 uid="uid://cbp581eaywve"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1aueu"]
-size = Vector2(50, 50)
+[ext_resource type="PackedScene" uid="uid://duutk46b4tgwj" path="res://scenes/build.tscn" id="1_41iq2"]
+[ext_resource type="PackedScene" uid="uid://bryyv7eidf762" path="res://scenes/buildingcard.tscn" id="1_ul55e"]
 
 [node name="buildingscene" type="Control"]
 layout_mode = 3
@@ -19,10 +19,12 @@ offset_bottom = 744.0
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+[node name="TextureButton" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_41iq2")]
 layout_mode = 2
-texture_normal = SubResource("PlaceholderTexture2D_1aueu")
 
-[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-texture_normal = SubResource("PlaceholderTexture2D_1aueu")
+[node name="Popup" type="Popup" parent="."]
+size = Vector2i(500, 500)
+content_scale_mode = 2
+content_scale_aspect = 4
+
+[node name="buildingcard" parent="Popup" instance=ExtResource("1_ul55e")]

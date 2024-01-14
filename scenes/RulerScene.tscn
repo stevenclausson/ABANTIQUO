@@ -7,8 +7,8 @@
 script = ExtResource("1_ej7v3")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 960.0
-offset_bottom = 616.0
+offset_right = 800.0
+offset_bottom = 800.0
 
 [node name="RulerImg" type="Sprite2D" parent="Panel"]
 position = Vector2(64, 64)
@@ -31,3 +31,10 @@ offset_right = 373.0
 offset_bottom = 66.0
 text = "Title: Chieftan
 "
+
+[node name="SkillsBtn" type="Button" parent="Panel"]
+offset_left = 8.0
+offset_top = 192.0
+offset_right = 128.0
+offset_bottom = 223.0
+text = "Skills"

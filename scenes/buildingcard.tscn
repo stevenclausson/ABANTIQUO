@@ -12,10 +12,8 @@ grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 720.0
-offset_top = 72.0
-offset_right = 1152.0
-offset_bottom = 480.0
+offset_right = 400.0
+offset_bottom = 408.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel"]
 position = Vector2(208, 80)
@@ -71,23 +69,22 @@ text = "Efficiency:"
 
 [node name="Button" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 360.0
+offset_left = 328.0
 offset_top = 368.0
-offset_right = 424.0
+offset_right = 392.0
 offset_bottom = 399.0
 text = "Apply"
 
 [node name="InputLbl" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 24.0
-offset_right = 88.0
+offset_right = 64.0
 offset_bottom = 26.0
 text = "INPUT:"
 
 [node name="OutputLbl" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 336.0
-offset_right = 424.0
+offset_left = 320.0
+offset_right = 408.0
 offset_bottom = 26.0
 text = "OUTPUT:"
 

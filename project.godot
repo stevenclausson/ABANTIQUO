@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="AB ANTIQUO"
-config/features=PackedStringArray("4.1", "C#", "Forward Plus")
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -20,6 +20,7 @@ Global="*res://scripts/Global.gd"
 SaveResource="*res://scripts/Resource.gd"
 GlobalResearch="*res://scripts/GlobalResearch.gd"
 GlobalC="*res://scripts/GlobalC.cs"
+AudioManagerTsc="*res://scenes/audio_manager.tscn"
 
 [display]
 

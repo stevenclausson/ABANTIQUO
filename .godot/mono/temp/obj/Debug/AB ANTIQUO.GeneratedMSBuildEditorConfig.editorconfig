@@ -14,3 +14,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ABANTIQUO
 build_property.ProjectDir = C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

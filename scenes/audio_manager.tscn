@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://chm8e1g7yeuwe"]
+
+[ext_resource type="Script" path="res://scripts/audio_manager.gd" id="1_6x514"]
+[ext_resource type="AudioStream" uid="uid://osuiugtahfe1" path="res://audio/music/breves_dies_hominis.ogg" id="1_qy25s"]
+[ext_resource type="AudioStream" uid="uid://c0fdl6ca0gk8g" path="res://audio/music/v312.ogg" id="2_35icv"]
+
+[node name="AudioManager" type="Node2D"]
+script = ExtResource("1_6x514")
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_qy25s")
+
+[node name="GameMusic1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_35icv")

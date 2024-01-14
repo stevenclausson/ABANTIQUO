@@ -1,8 +1,9 @@
+res://scenes/mainmenu.tscn
+res://scripts/Global.gd
+res://scripts/GlobalC.cs
+res://scripts/PROVINCEGUI.gd
 res://scenes/PROVINCEGUI.tscn
 res://scenes/char_creation.tscn
-res://scenes/mainmenu.tscn
 res://scenes/RulerScene.tscn
-res://scenes/cityscene.tscn
-res://scenes/buildingcard.tscn
-res://scenes/buildingscene.tscn
-res://scripts/Global.gd
+res://scenes/audio_manager.tscn
+res://scenes/RulerScript.cs

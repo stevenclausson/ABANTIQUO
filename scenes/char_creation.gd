@@ -1,5 +1,6 @@
 extends Control
 
+
 var message0 = "An Asian culture, considered to have the earliest moat and walled settlements. Choosing Daxi will grant the following bonuses: 
 	+ Population
 	+ City Defense(walls)
@@ -41,4 +42,8 @@ func _on_game_btn_pressed():
 
 func _on_start_game_btn_pressed():
 	Global.CheckCulture()
+	Global.adultMalePopulation = 10
+	Global.adultFemalePopulation = 10
+	Global.maleChildrenPopulation = 2
+	Global.femaleChildrenPopulation = 1
 	get_tree().change_scene_to_file("res://scenes/PROVINCEGUI.tscn")

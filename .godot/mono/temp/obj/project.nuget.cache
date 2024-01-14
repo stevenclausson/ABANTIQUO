@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "M1xwVLnek7yNX0OXHpCo4l9tJ5JcBNRfkSnyG4oJiBc9MwHNxyuUPOkUw+5QwjMdFstOyaG2vc4x8jFKiXTENA==",
+  "dgSpecHash": "mriHzmOGCdr7m8vgazemrRVxaKZggFgzyng6j5JH26al2Ew9kKxLjNQKrYp+URsTGR31RXxMklwiljt0qODYTA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Steve\\Documents\\Rumbling Game Studio\\Projects\\AB HINC\\ABANTIQUO\\AB ANTIQUO.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Steve\\.nuget\\packages\\godot.sourcegenerators\\4.1.2\\godot.sourcegenerators.4.1.2.nupkg.sha512",
-    "C:\\Users\\Steve\\.nuget\\packages\\godotsharp\\4.1.2\\godotsharp.4.1.2.nupkg.sha512",
-    "C:\\Users\\Steve\\.nuget\\packages\\godotsharpeditor\\4.1.2\\godotsharpeditor.4.1.2.nupkg.sha512"
+    "C:\\Users\\Steve\\.nuget\\packages\\godot.sourcegenerators\\4.2.0\\godot.sourcegenerators.4.2.0.nupkg.sha512",
+    "C:\\Users\\Steve\\.nuget\\packages\\godotsharp\\4.2.0\\godotsharp.4.2.0.nupkg.sha512",
+    "C:\\Users\\Steve\\.nuget\\packages\\godotsharpeditor\\4.2.0\\godotsharpeditor.4.2.0.nupkg.sha512"
   ],
   "logs": []
 }

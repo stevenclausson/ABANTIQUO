@@ -32,3 +32,4 @@ C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\
 C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.pdb
 C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.genruntimeconfig.cache
 C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\ref\AB ANTIQUO.dll
+C:\Users\Steve\Documents\Rumbling Game Studio\Projects\AB HINC\ABANTIQUO\.godot\mono\temp\obj\Debug\AB ANTIQUO.sourcelink.json

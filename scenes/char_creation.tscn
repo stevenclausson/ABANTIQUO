@@ -15,8 +15,8 @@ script = ExtResource("1_wsdsl")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(640, 404)
-scale = Vector2(1.25, 0.789063)
+position = Vector2(728, 492)
+scale = Vector2(1.42188, 0.960938)
 texture = ExtResource("2_oxaek")
 
 [node name="OptionButton" type="OptionButton" parent="CanvasLayer"]
@@ -89,10 +89,10 @@ text = "Choose a culture and begin your journey..."
 autowrap_mode = 2
 
 [node name="StartGameBtn" type="Button" parent="CanvasLayer"]
-offset_left = 1040.0
-offset_top = 592.0
-offset_right = 1140.0
-offset_bottom = 623.0
+offset_left = 848.0
+offset_top = 352.0
+offset_right = 948.0
+offset_bottom = 383.0
 text = "Start Game!"
 
 [connection signal="item_selected" from="CanvasLayer/OptionButton" to="." method="_on_option_button_item_selected"]
